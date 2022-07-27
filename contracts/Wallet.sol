@@ -1,5 +1,4 @@
-pragma solidity 0.6.0;
-pragma experimental ABIEncoderV2;
+pragma solidity 0.8.0;
 
 contract Wallet {
     address[] public approvers;
@@ -14,7 +13,7 @@ contract Wallet {
     Transfer[] public transfers;
     mapping(address => mapping(uint => bool)) public approvals;
 
-    constructor(address[] memory _approvers, uint _quorum) public{
+    constructor(address[] memory _approvers, uint _quorum){
         approvers = _approvers;
         quorum = _quorum;
     }
