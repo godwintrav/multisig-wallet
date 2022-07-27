@@ -51,11 +51,15 @@ module.exports = {
       ),
       network_id: 42
     },
-    development: {
-     host: "127.0.0.1",     // Localhost (default: none)
-     port: 7545,            // Standard Ethereum port (default: none)
-     network_id: "*",       // Any network (default: none)
-    },
+    goerli: {
+      provider: () => new provider(
+       secrets.privateKeys,
+        'https://goerli.infura.io/v3/115bde45d69e42049d68ae840bc899a7',
+        0,
+        3
+      ),
+      network_id: 42
+    }
     //
     // An additional network, but with some advanced options…
     // advanced: {
